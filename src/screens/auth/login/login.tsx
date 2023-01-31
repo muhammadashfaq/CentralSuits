@@ -11,10 +11,12 @@ import {
 import {Input, Spacer, AppButton} from '../../../components';
 import {HP, WP, appLogos, colors} from '../../../utils';
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {useNavigation} from '@react-navigation/native';
 
 interface LoginProps {}
 
 const Login = (props: LoginProps) => {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       <KeyboardAwareScrollView contentContainerStyle={{flex: 1}}>
@@ -42,7 +44,11 @@ const Login = (props: LoginProps) => {
           <AppButton
             title={'Login'}
             style={{marginHorizontal: WP('2')}}
-            onPress={() => {}}
+            onPress={() => {
+              navigation.replace('App', {
+                screen: 'Home',
+              });
+            }}
           />
         </View>
         <View style={styles.bottomView}>

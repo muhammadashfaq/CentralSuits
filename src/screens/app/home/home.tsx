@@ -1,18 +1,23 @@
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import {Text, View, StyleSheet, SafeAreaView} from 'react-native';
+import {HomeHeader} from '../../../components';
+import {colors} from '../../../utils';
 
-interface SplashProps {}
+interface HomeProps {}
 
-const Splash = (props: SplashProps) => {
+const Home = (props: HomeProps) => {
   return (
-    <View style={styles.container}>
-      <Text>Splash</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <HomeHeader />
+    </SafeAreaView>
   );
 };
 
-export default Splash;
+export default Home;
 
 const styles = StyleSheet.create({
-  container: {}
+  container: {
+    flex: 1,
+    backgroundColor: colors.white,
+  },
 });
