@@ -1,10 +1,22 @@
-import * as React from 'react';
+import {useNavigation} from '@react-navigation/native';
+import React, {useEffect} from 'react';
 import {Text, View, StyleSheet, SafeAreaView, Image} from 'react-native';
 import {appLogos, colors, HP, WP} from '../../../utils';
 
 interface SplashProps {}
 
 const Splash = (props: SplashProps) => {
+  const navigation = useNavigation();
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate('Login');
+      // navigation.navigate('App', {
+      //   screen: 'Home',
+      // });
+    }, 1000);
+  }, []);
+
   return (
     <SafeAreaView style={styles.container}>
       <Image

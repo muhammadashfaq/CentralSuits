@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   ViewStyle,
 } from 'react-native';
-import {colors, fontFamily, HP} from '../../utils';
+import {colors, HP} from '../../utils';
 
 interface AppButtonProps {
   title: String;
@@ -40,13 +40,13 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.primary,
     height: HP('5'),
-    borderRadius: 15,
+    borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
   },
   titleStyle: {
     color: colors.white,
-    fontFamily: fontFamily['DMSans-Bold'],
+    // fontFamily: fontFamily['DMSans-Bold'],
     fontSize: 16,
   },
 });

@@ -53,7 +53,7 @@ const Input = ({
             <Text
               numberOfLines={1}
               style={{
-                fontFamily: fontFamily['DMSans-Medium'],
+                // fontFamily: fontFamily['DMSans-Medium'],
                 color: colors.error,
                 paddingLeft: WP('1.5'),
               }}>
@@ -118,7 +118,7 @@ const styles = StyleSheet.create({
     /// marginHorizontal: HP('2'),
   },
   inputStyle: {
-    fontFamily: fontFamily['DMSans-Bold'],
+    //  fontFamily: fontFamily['DMSans-Bold'],
     fontSize: 12,
     borderBottomWidth: 0,
     paddingHorizontal: WP('1'),
@@ -141,8 +141,8 @@ const styles = StyleSheet.create({
     // marginHorizontal: HP('2'),
   },
   labelStyle: {
-    color: colors.black,
-    fontFamily: fontFamily.Poppin_Light,
+    // color: colors.black,
+    // fontFamily: fontFamily.Poppin_Light,
     marginLeft: HP('0.5'),
     marginBottom: HP('0.5'),
   },
