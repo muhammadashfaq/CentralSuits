@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ImageSourcePropType} from 'react-native';
+import {ImageSourcePropType, Dimensions} from 'react-native';
 import {
   Text,
   View,
@@ -8,14 +8,14 @@ import {
   Image,
   ImageProps,
 } from 'react-native';
-import {appIcons, appImages, colors, fontFamily, HP, WP} from '../../utils';
+import {appImages, colors, HP, WP} from '../../utils';
 
-interface ExcerciseCardProps {
+interface PropertyCardProps {
   title: String;
   image: ImageSourcePropType;
 }
 
-const ExcerciseCard = ({title, image}: ExcerciseCardProps) => {
+const PropertyCard = ({title, image}: PropertyCardProps) => {
   const renderFavView = (isFavorite: boolean) => {
     return (
       <TouchableOpacity
@@ -31,11 +31,11 @@ const ExcerciseCard = ({title, image}: ExcerciseCardProps) => {
           top: HP('1.5'),
         }}
       >
-        <Image
+        {/* <Image
           resizeMode={'contain'}
           style={{width: 20, height: 25, tintColor: colors.primary}}
           source={appIcons.unfilledHeartIcon}
-        />
+        /> */}
       </TouchableOpacity>
     );
   };
@@ -44,36 +44,48 @@ const ExcerciseCard = ({title, image}: ExcerciseCardProps) => {
     <TouchableOpacity style={styles.container}>
       {renderFavView(false)}
       <Image
-        source={image}
+        source={appImages.propertyImage}
         style={{
-          width: 150,
-          height: 120,
+          width: 174,
+          height: 160,
           alignSelf: 'center',
-          marginTop: HP('3'),
+          marginTop: HP('0.5'),
+          borderRadius: 10,
         }}
-        resizeMode={'contain'}
+        resizeMode={'cover'}
       />
       <Text
         style={{
-          fontFamily: fontFamily['DMSans-Bold'],
-          alignSelf: 'center',
-          paddingVertical: HP('2'),
-          // bottom: HP('0'),
+          //alignSelf: 'center',
+          paddingTop: HP('1'),
+          fontWeight: '500',
+          fontSize: 16,
+          paddingLeft: HP('1'),
         }}
       >
-        {title}
+        Central Suits Tower Santo Domingo
+      </Text>
+      <Text
+        style={{
+          color: '#828282',
+          paddingLeft: HP('1'),
+          paddingVertical: HP('1'),
+        }}
+      >
+        Apartment #3B
       </Text>
     </TouchableOpacity>
   );
 };
 
-export {ExcerciseCard};
+export {PropertyCard};
 
 const styles = StyleSheet.create({
   container: {
-    width: WP('48'),
-    //  height: HP('18'),
-    borderRadius: 30,
+    //  flex: 1,
+    width: Dimensions.get('window').width / 2.3,
+    //  height: HP('25'),
+    borderRadius: 10,
     backgroundColor: colors.white,
     shadowColor: '#000',
     shadowOffset: {
@@ -84,7 +96,7 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
     zIndex: 1,
-    marginHorizontal: WP('2.5'),
+    marginHorizontal: WP('1.5'),
     marginTop: HP('1'),
     marginBottom: HP('1'),
   },

@@ -3,9 +3,9 @@ import {Text, View, StyleSheet, SafeAreaView} from 'react-native';
 import {HomeHeader} from '../../../components';
 import {colors} from '../../../utils';
 
-interface HomeProps {}
+interface DashboardProps {}
 
-const Home = (props: HomeProps) => {
+const Dashboard = (props: DashboardProps) => {
   return (
     <SafeAreaView style={styles.container}>
       <HomeHeader />
@@ -13,7 +13,7 @@ const Home = (props: HomeProps) => {
   );
 };
 
-export default Home;
+export default Dashboard;
 
 const styles = StyleSheet.create({
   container: {

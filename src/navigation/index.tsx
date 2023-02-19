@@ -3,7 +3,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import {AuthStack} from './stacks/authstack';
-import {AppStack} from './stacks/homestack';
+import {BottomTabs} from './bottom/main-tabs';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,7 +12,7 @@ export const MainNavigation = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name={'Auth'} component={AuthStack} />
-        <Stack.Screen name={'App'} component={AppStack} />
+        <Stack.Screen name={'App'} component={BottomTabs} />
       </Stack.Navigator>
     </NavigationContainer>
   );
