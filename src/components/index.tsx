@@ -7,7 +7,4 @@ export * from './Headers/FlatlistHeader';
 export * from './Cards/PropertyCard';
 export * from './Cards/LiveCameraCard';
 export * from './Tabs/HomeTabs';
-// export * from './Header/FlatlistHeader';
-// export * from './Tabs/HomeTabs';
-// export * from './Cards/SubscribeCard';
-// export * from './Cards/CourselItem';
+export * from './Cards/HomeCard';
