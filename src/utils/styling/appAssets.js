@@ -15,4 +15,6 @@ export const appImages = {
   location: require('../../assets/images/location.png'),
   areaIcon: require('../../assets/images/area.png'),
   download: require('../../assets/images/download.png'),
+  backArrow: require('../../assets/images/backArrow.png'),
+  map: require('../../assets/images/mapImage.png'),
 };
