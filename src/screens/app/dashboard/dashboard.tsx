@@ -7,18 +7,26 @@ import {
   Image,
   Dimensions,
 } from 'react-native';
-import {HomeHeader, HomeCard} from '../../../components';
-import {colors, HP} from '../../../utils';
+import { HomeCard, UserHeader } from '../../../components';
+import { appImages, colors, HP, WP } from '../../../utils';
 
-interface DashboardProps {}
+interface DashboardProps { }
 
 const Dashboard = (props: DashboardProps) => {
   return (
     <SafeAreaView style={styles.container}>
-      <HomeHeader />
-      <View style={{marginVertical: HP('1')}} />
+      <View style={{
+        marginTop: HP(1.5),
+        marginHorizontal: WP(4)
+      }}>
+        <UserHeader
+          title={"Hello"}
+          description={"John Doe"}
+          icon={appImages.notification} />
+      </View>
+      <View style={{ marginVertical: HP('1') }} />
       <HomeCard />
-    </SafeAreaView>
+    </SafeAreaView >
   );
 };
 
