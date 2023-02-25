@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {ImageSourcePropType, Dimensions} from 'react-native';
+import { ImageSourcePropType, Dimensions } from 'react-native';
 import {
   Text,
   View,
@@ -8,14 +8,15 @@ import {
   Image,
   ImageProps,
 } from 'react-native';
-import {appImages, colors, HP, WP} from '../../utils';
+import { appImages, colors, HP, WP } from '../../utils';
 
 interface PropertyCardProps {
   title: String;
   image: ImageSourcePropType;
+  onPressCard: () => void;
 }
 
-const PropertyCard = ({title, image}: PropertyCardProps) => {
+const PropertyCard = ({ title, image, onPressCard }: PropertyCardProps) => {
   const renderFavView = (isFavorite: boolean) => {
     return (
       <TouchableOpacity
@@ -41,7 +42,7 @@ const PropertyCard = ({title, image}: PropertyCardProps) => {
   };
 
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity onPress={onPressCard} style={styles.container}>
       {renderFavView(false)}
       <Image
         source={appImages.propertyImage}
@@ -78,7 +79,7 @@ const PropertyCard = ({title, image}: PropertyCardProps) => {
   );
 };
 
-export {PropertyCard};
+export { PropertyCard };
 
 const styles = StyleSheet.create({
   container: {
